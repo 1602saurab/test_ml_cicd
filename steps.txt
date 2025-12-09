@@ -1,0 +1,49 @@
+Agenda : local system project ---> using ci/cd ---> aws s3 bucket push 
+
+
+step-1 : 
+
+create a venv and activate 
+
+step-2 : 
+
+requirements.txt 
+
+step-3 : 
+
+test.py ---> we will have our project . 
+
+step-4 : 
+
+we will push our code to github 
+
+
+step-5 : for ci/cd , we have to create 
+
+.github/workflows/s3.yaml 
+
+then push this code to github . 
+
+
+step-6 : Connect Github to AWS S3 bucket 
+
+
+go to AWS ---> 
+
+IAM ---> User ---> Attach Policy('AWSS3FullAccess') ---> create 
+access key , secret access key . 
+
+
+AWS ---> S3 Bucket ---> 
+
+
+step-7 : 
+
+go to github ---> settings ---> Actions and variables ---> we will create 2 
+repository secrets 
+1. AWS_ACCESS_KEY_ID  : Paste our key here
+2. AWS_SECRET_ACCESS_KEY  :  Paste our key 
+
+
+Now click on Actions ---> We will see our status will show success and 
+when we open our s3 bucket then we will see our files and folders are present there . 
